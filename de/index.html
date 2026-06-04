@@ -34,6 +34,10 @@
           <a href="../en/index.html">EN</a>
         </div>
       </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Dark Mode umschalten">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
       <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
       </button>
@@ -53,6 +57,15 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-deco" aria-hidden="true">
+      <svg width="580" height="580" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(100,100) scale(0.85) translate(-250,-84.5)">
+          <polygon points="250,26 162,163 250,163" fill="#7A4D2C"/>
+          <polygon points="250,26 250,163 338,163" fill="#BF8750"/>
+          <polygon points="250,6 241,26 259,26" fill="#1C1C1C"/>
+        </g>
+      </svg>
+    </div>
     <div class="hero-inner">
       <span class="label">Uptrail Advertising · Leipzig</span>
       <h1>Werbung,<br />die <em>wirkt.</em></h1>
@@ -235,6 +248,13 @@
         mobileNav.classList.remove('open');
         document.body.style.overflow = '';
       });
+    });
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    themeToggle.addEventListener('click', () => {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+      localStorage.setItem('theme', dark ? 'light' : 'dark');
     });
   </script>
 </body>
