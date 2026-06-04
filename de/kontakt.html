@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Uptrail Advertising Leipzig | Kostenlose Erstberatung</title>
+  <meta name="description" content="Nehmen Sie Kontakt auf. Das erste Gespräch ist kostenlos — wir hören zu und sagen ehrlich, was wir für Sie tun können. Uptrail Advertising, Leipzig." />
+  <link rel="canonical" href="https://uptrailadvertising.com/de/kontakt.html" />
+  <link rel="alternate" hreflang="de" href="https://uptrailadvertising.com/de/kontakt.html" />
+  <link rel="alternate" hreflang="en" href="https://uptrailadvertising.com/en/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="./index.html" class="nav-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><g transform="translate(100,100) scale(0.85) translate(-250,-84.5)"><polygon points="250,26 162,163 250,163" fill="#7A4D2C"/><polygon points="250,26 250,163 338,163" fill="#BF8750"/><line x1="250" y1="6" x2="250" y2="163" stroke="#1C1C1C" stroke-width="3"/><polygon points="250,6 241,26 259,26" fill="#1C1C1C"/></g></svg>
+        <span class="nav-logo-text">Uptrail<span>.</span></span>
+      </a>
+      <ul class="nav-center">
+        <li><a href="./leistungen.html">Leistungen</a></li>
+        <li><a href="./ueber-uns.html">Über uns</a></li>
+        <li><a href="./kontakt.html" class="nav-cta">Gespräch anfragen</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-switch">
+          <a href="../de/kontakt.html" class="active">DE</a>
+          <span class="sep">/</span>
+          <a href="../en/contact.html">EN</a>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="./index.html">Home</a>
+    <a href="./leistungen.html">Leistungen</a>
+    <a href="./ueber-uns.html">Über uns</a>
+    <a href="./kontakt.html">Gespräch anfragen</a>
+    <div class="mobile-lang">
+      <a href="../de/kontakt.html" class="active">DE</a>
+      <a href="../en/contact.html">EN</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="label">Kontakt</span>
+      <h1>Schreiben Sie uns.</h1>
+      <p>Das erste Gespräch ist kostenlos. Kein Druck, keine Verpflichtung — wir hören einfach zu.</p>
+    </div>
+  </div>
+
+  <!-- KONTAKT -->
+  <section class="kontakt-section">
+    <div class="kontakt-grid">
+
+      <div class="kontakt-info">
+        <span class="label">Kontaktdaten</span>
+        <h2>So erreichen Sie uns.</h2>
+        <p>Ob kurze Frage oder konkretes Projekt — schreiben Sie uns einfach. Wir antworten innerhalb von 24 Stunden.</p>
+
+        <div class="kontakt-details">
+          <div class="kontakt-detail-item">
+            <span class="detail-label">E-Mail</span>
+            <a href="mailto:info@uptrailadvertising.com">info@uptrailadvertising.com</a>
+          </div>
+          <div class="kontakt-detail-item">
+            <span class="detail-label">Standort</span>
+            <span>Leipzig, Deutschland</span>
+          </div>
+          <div class="kontakt-detail-item">
+            <span class="detail-label">Sprachen</span>
+            <span>Deutsch · Englisch</span>
+          </div>
+          <div class="kontakt-detail-item">
+            <span class="detail-label">Antwortzeit</span>
+            <span>Innerhalb von 24 Stunden</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div id="form-success" class="form-success">
+          Vielen Dank für Ihre Nachricht. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+        </div>
+
+        <form class="kontakt-form" name="kontakt" netlify netlify-honeypot="bot-field" id="kontakt-form">
+          <input type="hidden" name="form-name" value="kontakt" />
+          <p style="display:none;"><input name="bot-field" /></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" placeholder="Max Mustermann" required />
+            </div>
+            <div class="form-group">
+              <label for="firma">Unternehmen</label>
+              <input type="text" id="firma" name="firma" placeholder="Musterfirma GmbH" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" placeholder="max@musterfirma.de" required />
+            </div>
+            <div class="form-group">
+              <label for="telefon">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" placeholder="+49 ..." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="leistung">Worum geht es?</label>
+            <select id="leistung" name="leistung">
+              <option value="" disabled selected>Bitte wählen</option>
+              <option value="webdesign">Webdesign &amp; Entwicklung</option>
+              <option value="social-ads">Social Media Advertising</option>
+              <option value="seo">SEO</option>
+              <option value="design">Design &amp; Markenauftritt</option>
+              <option value="content">Content Marketing</option>
+              <option value="analytik">Analytik &amp; Erfolgsmessung</option>
+              <option value="komplett">Komplettpaket / alles besprechen</option>
+              <option value="sonstiges">Sonstiges</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nachricht">Nachricht *</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Kurz beschreiben, was Sie vorhaben oder welche Fragen Sie haben..." required></textarea>
+          </div>
+
+          <p class="form-note">* Pflichtfelder. Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+
+          <button type="submit" class="btn btn-primary" style="align-self: flex-start; border: none; cursor: pointer;">Nachricht senden</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><g transform="translate(100,100) scale(0.85) translate(-250,-84.5)"><polygon points="250,26 162,163 250,163" fill="#7A4D2C"/><polygon points="250,26 250,163 338,163" fill="#BF8750"/><line x1="250" y1="6" x2="250" y2="163" stroke="rgba(253,250,247,0.4)" stroke-width="3"/><polygon points="250,6 241,26 259,26" fill="rgba(253,250,247,0.4)"/></g></svg>
+        <span class="footer-logo-text">Uptrail<span>.</span></span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
+    <div class="footer-copy">
+      &copy; 2026 Uptrail Advertising · Leipzig, Deutschland · uptrailadvertising.com
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-nav a:not(.mobile-lang a)').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    const form = document.getElementById('kontakt-form');
+    const success = document.getElementById('form-success');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch('/', { method: 'POST', body: data });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
