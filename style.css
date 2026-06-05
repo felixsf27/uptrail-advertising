@@ -16,6 +16,14 @@
   color: var(--text);
 }
 
+[data-theme="dark"] .cta-section {
+  background: #0E0C0A;
+}
+
+[data-theme="dark"] footer {
+  background: #0E0C0A;
+}
+
 /* Theme toggle button */
 .theme-toggle {
   background: none;
