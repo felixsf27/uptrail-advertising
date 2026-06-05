@@ -193,13 +193,26 @@
     });
     const form = document.getElementById('kontakt-form');
     const success = document.getElementById('form-success');
+    const submitBtn = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const data = new FormData(form);
-      const res = await fetch('/', { method: 'POST', body: data });
-      if (res.ok) {
-        form.style.display = 'none';
-        success.style.display = 'block';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      try {
+        const data = new FormData(form);
+        const res = await fetch(window.location.pathname, { method: 'POST', body: data });
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send message';
+          alert('Something went wrong. Please write to us directly at info@uptrailadvertising.com');
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+        alert('Something went wrong. Please write to us directly at info@uptrailadvertising.com');
       }
     });
   </script>
