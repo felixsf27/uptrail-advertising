@@ -20,6 +20,22 @@
   background: #0E0C0A;
 }
 
+[data-theme="dark"] .cta-section h2 {
+  color: #F3EDE5;
+}
+
+[data-theme="dark"] .cta-section p {
+  color: rgba(243, 237, 229, 0.65);
+}
+
+[data-theme="dark"] .cta-direkt {
+  color: rgba(243, 237, 229, 0.4);
+}
+
+[data-theme="dark"] .cta-direkt a {
+  color: rgba(243, 237, 229, 0.65);
+}
+
 [data-theme="dark"] footer {
   background: #0E0C0A;
 }
