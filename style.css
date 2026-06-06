@@ -420,10 +420,26 @@ nav {
   padding: 0 var(--padding);
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-inner h1 { margin-bottom: 1.5rem; max-width: 14ch; }
 .hero-inner h1 em { font-style: italic; color: var(--accent); }
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.13;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .hero-visual { opacity: 0.2; }
+.hero-visual svg { width: 100%; max-width: 420px; height: auto; }
 
 .hero-sub {
   font-size: 1.1rem;
@@ -462,6 +478,20 @@ nav {
   background: var(--bg);
   padding-left: var(--padding);
   padding-right: var(--padding);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45%;
+  height: 200%;
+  background: radial-gradient(ellipse at right center, var(--bg-dark) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .page-hero-inner { max-width: var(--max-width); margin: 0 auto; }
@@ -1113,6 +1143,9 @@ footer {
 
   .process-steps { grid-template-columns: 1fr; }
 
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+
   .nav-center,
   .nav-right { display: none; }
 
@@ -1126,4 +1159,31 @@ footer {
   .footer-inner { flex-direction: column; text-align: center; }
   .form-row { grid-template-columns: 1fr; }
   .hero-scroll { display: none; }
+
+  .leistung-card .leistung-icon,
+  .leistung-card .leistung-nr { display: none; }
+
+  .leistung-card p { display: none; max-width: none; }
+
+  .leistung-card { cursor: pointer; user-select: none; }
+
+  .leistung-card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .leistung-card h3::after {
+    content: '+';
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-left: 0.75rem;
+  }
+
+  .leistung-card.open p { display: block; }
+  .leistung-card.open h3::after { content: '\2212'; }
 }

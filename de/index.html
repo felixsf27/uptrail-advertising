@@ -117,24 +117,27 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-deco" aria-hidden="true">
-      <svg width="580" height="580" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(100,100) scale(0.85) translate(-250,-84.5)">
-          <polygon points="250,26 162,163 250,163" fill="#7A4D2C"/>
-          <polygon points="250,26 250,163 338,163" fill="#BF8750"/>
-          <polygon points="250,6 241,26 259,26" fill="#1C1C1C"/>
-        </g>
-      </svg>
-    </div>
     <div class="hero-inner">
-      <span class="label">Uptrail Advertising · Leipzig</span>
-      <h1>Guiding Your Business <em>Uptrail.</em></h1>
-      <p class="hero-sub">
-        Jedes Unternehmen verdient es, sein volles Potenzial auszuschöpfen. Ob frisches Startup oder gestandenes Haus. Wir sorgen dafür, dass Ihre Marke die richtigen Menschen zur richtigen Zeit erreicht. Online-Marketing ist so wettbewerbsintensiv wie nie. Starten Sie den Aufstieg mit uns.
-      </p>
-      <div>
-        <a href="./kontakt.html" class="btn btn-primary">Gespräch anfragen</a>
-        <a href="./leistungen.html" class="btn btn-outline">Leistungen ansehen</a>
+      <div class="hero-text">
+        <span class="label">Uptrail Advertising · Leipzig</span>
+        <h1>Guiding Your Business <em>Uptrail.</em></h1>
+        <p class="hero-sub">
+          Jedes Unternehmen verdient es, sein volles Potenzial auszuschöpfen. Ob frisches Startup oder gestandenes Haus. Wir sorgen dafür, dass Ihre Marke die richtigen Menschen zur richtigen Zeit erreicht. Online-Marketing ist so wettbewerbsintensiv wie nie. Starten Sie den Aufstieg mit uns.
+        </p>
+        <div>
+          <a href="./kontakt.html" class="btn btn-primary">Gespräch anfragen</a>
+          <a href="./leistungen.html" class="btn btn-outline">Leistungen ansehen</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <g transform="translate(100,100) scale(0.85) translate(-250,-84.5)">
+            <polygon points="250,26 162,163 250,163" fill="#7A4D2C"/>
+            <polygon points="250,26 250,163 338,163" fill="#BF8750"/>
+            <line x1="250" y1="6" x2="250" y2="163" stroke="#1C1C1C" stroke-width="3"/>
+            <polygon points="250,6 241,26 259,26" fill="#1C1C1C"/>
+          </g>
+        </svg>
       </div>
     </div>
     <div class="hero-scroll">Mehr entdecken</div>
@@ -374,6 +377,11 @@
       const dark = document.documentElement.getAttribute('data-theme') === 'dark';
       document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
       localStorage.setItem('theme', dark ? 'light' : 'dark');
+    });
+    document.querySelectorAll('.leistung-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        if (window.innerWidth <= 600) card.classList.toggle('open');
+      });
     });
   </script>
 </body>
