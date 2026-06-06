@@ -40,8 +40,10 @@
   background: #0E0C0A;
 }
 
-[data-theme="dark"] .hero-mark-line { stroke: #BF8750; }
-[data-theme="dark"] .hero-mark-arrow { fill: #BF8750; }
+.hero-mark-line { stroke: #E8C98A !important; }
+.hero-mark-arrow { fill: #E8C98A !important; }
+.nav-logo svg g > line { stroke: #E8C98A !important; }
+.nav-logo svg g > polygon:last-child { fill: #E8C98A !important; }
 
 /* Theme toggle button */
 .theme-toggle {
@@ -397,7 +399,7 @@ nav {
 
 .hero-btns {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.75rem;
   align-items: center;
 }
