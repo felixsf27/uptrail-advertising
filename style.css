@@ -404,6 +404,7 @@ nav {
   align-items: center;
 }
 
+.hero-btns .btn { flex: 1; text-align: center; }
 .hero-btns .btn-outline { margin-left: 0; }
 
 /* =============================================
