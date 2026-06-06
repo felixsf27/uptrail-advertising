@@ -401,10 +401,16 @@ nav {
   display: flex;
   flex-wrap: nowrap;
   gap: 0.75rem;
-  align-items: center;
+  align-items: stretch;
 }
 
-.hero-btns .btn { flex: 1; text-align: center; }
+.hero-btns .btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .hero-btns .btn-outline { margin-left: 0; }
 
 /* =============================================
